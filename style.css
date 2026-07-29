@@ -1,0 +1,165 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #38bdf8;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.team-card {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.team-card h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    color: #cbd5e1;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background: #1e293b;
+    border: 1px solid #475569;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0284c7;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #0369a1;
+}
+
+.hidden {
+    display: none;
+}
+
+.results-container {
+    margin-top: 30px;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+}
+
+.xg-summary {
+    display: flex;
+    justify-content: space-around;
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.probabilities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.prob-box {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #334155;
+}
+
+.prob-box span {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
+
+.prob-box strong {
+    font-size: 1.2rem;
+    color: #38bdf8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f172a;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+th {
+    background: #334155;
+    color: #f8fafc;
+    font-size: 0.9rem;
+}
+
+td {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .match-grid {
+        grid-template-columns: 1fr;
+    }
+}
