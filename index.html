@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor de Goles por Remates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Predictor de Partidos por Remates</h1>
+        <p class="subtitle">Modelo matemático basado en xG simplificado y Distribución de Poisson</p>
+
+        <div class="match-grid">
+            <!-- Local -->
+            <div class="team-card">
+                <h2>Equipo Local</h2>
+                <div class="input-group">
+                    <label for="shotsHome">Remates Totales:</label>
+                    <input type="number" id="shotsHome" value="12" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="sotHome">Remates a Puerta:</label>
+                    <input type="number" id="sotHome" value="5" min="0">
+                </div>
+            </div>
+
+            <!-- Visitante -->
+            <div class="team-card">
+                <h2>Equipo Visitante</h2>
+                <div class="input-group">
+                    <label for="shotsAway">Remates Totales:</label>
+                    <input type="number" id="shotsAway" value="9" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="sotAway">Remates a Puerta:</label>
+                    <input type="number" id="sotAway" value="3" min="0">
+                </div>
+            </div>
+        </div>
+
+        <button id="calculateBtn" onclick="calcularPrediccion()">Calcular Predicción</button>
+
+        <div id="results" class="results-container hidden">
+            <h2>Resultados del Modelo</h2>
+            <div class="xg-summary">
+                <p>xG Local: <strong id="xgHomeVal">0.00</strong></p>
+                <p>xG Visitante: <strong id="xgAwayVal">0.00</strong></p>
+            </div>
+            
+            <div class="probabilities">
+                <div class="prob-box">
+                    <span>Victoria Local</span>
+                    <strong id="probHome">0%</strong>
+                </div>
+                <div class="prob-box">
+                    <span>Empate</span>
+                    <strong id="probDraw">0%</strong>
+                </div>
+                <div class="prob-box">
+                    <span>Victoria Visitante</span>
+                    <strong id="probAway">0%</strong>
+                </div>
+            </div>
+
+            <h3>Marcadores Exactos Más Probables</h3>
+            <table id="scoreTable">
+                <thead>
+                    <tr>
+                        <th>Marcador</th>
+                        <th>Probabilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Se llena con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
